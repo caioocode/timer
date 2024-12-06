@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="estilos/style.css">
+  <title>Cronômetro Regressivo - Timer</title>
+</head>
+<body>
+
+  <div class="timer-container">
+    <svg class="progress-ring" width="250" height="250" viewBox="0 0 150 150">
+      <circle class="progress-ring__circle" cx="75" cy="75" r="54" />
+    </svg>
+
+    <div id="timer" class="timer">00:00:00</div>
+  </div>
+
+  <section class="align-inputs">
+    <div class="input-container">
+      
+      <label for="hour">Horas</label>
+      <input type="number" name="" id="hour" value="00" max="99" min="0">
+    </div>
+    <div class="input-container">
+      <label for="minute">Minutos</label>
+      <input type="number" name="" id="minute" value="00" max="59" min="0">
+    </div>
+    <div class="input-container">
+      <label for="second">Segundos</label>
+      <input type="number" name="" id="second" value="00" max="59" min="0">
+    </div>
+  
+  </section>
+
+  <div class="btn">
+    <button id="btn-start"><i class="fas fa-play"></i></button>
+    <button id="btn-stop"><i class="fas fa-pause"></i></button>
+    <button id="btn-continue"><i class="fa-solid fa-stop"></i></button>
+    <button id="btn-reset"><i class="fas fa-redo"></i></button>
+  </div>
+</body>
+<script src="js/script.js"></script>
+</html>

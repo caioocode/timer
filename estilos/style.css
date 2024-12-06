@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex; /* Define um contêiner flex */
+  flex-direction: column;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante que ocupa a altura total da janela */
+
+  background: rgb(0, 0, 0);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+
+}
+
+label {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+input {
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+}
+
+button {
+  color: azure;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 90%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição suave */
+
+  /* Efeito de brilho para os botões */
+
+}
+
+button:hover {
+  color: #00FFFF;
+  box-shadow: 0 0 20px #00FFFF, 0 0 20px #00FFFF, 0 0 60px #00FFFF; /* Brilho no hover */
+}
+
+
+/* Transição suave de cores ao passar o mouse nos botões */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #00FFFF; /* Cor da borda no hover */
+}
+
+.timer {
+  font-size: 8em;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  
+}
+
+.input-container {
+  margin: 20px;
+  display:flex;
+  flex-direction:column;
+
+  /* align-items: center; */
+}
+
+.align-inputs {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* adicionando o círculo*/
+.timer-container {
+  
+  width: 100vw;
+  height: 330px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-ring {
+
+  transform: rotate(-90deg); 
+  margin: auto; 
+  
+}
+
+.progress-ring__circle {
+  fill: none; /* Nenhum preenchimento */
+  stroke: rgba(0, 191, 255, 0.8); /* Cor do traço (círculo ativo) */
+  stroke-width: 8; /* Espessura do traço */
+  stroke-linecap: round; /* Bordas arredondadas */
+  stroke-dasharray: 440; /* Circunferência inicial */
+  transform-origin: center;
+  stroke-dashoffset: 0; /* Offset inicial */
+  transform: rotate(-90);
+  transition: stroke-dashoffset 0.35s linear; /* Suavizar a animação */
+
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8)); /* Efeito de neon */
+
+  
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
